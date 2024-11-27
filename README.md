@@ -1,1 +1,1 @@
-# calculator
+This is a project for a simple calculator. The goal of this project is to put into practice all of the fundamentals of HTML, CSS and Javascript.
