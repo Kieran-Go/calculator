@@ -1,0 +1,42 @@
+h1{
+    display: flex;
+    justify-self: center;
+}
+
+.display{
+    border-style: solid;
+    width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    justify-self: center;
+    padding: 10px;
+    font-size: 32px;
+}
+
+.btnContainer{
+    display: flex;
+    justify-self: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 500px;
+    padding: 30px;
+    border-style: solid;
+    background-color:rgb(95, 100, 138);
+}
+
+.btn{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px;
+    width: 70px;
+    border-style: solid;
+}
+
+.btn.clear{
+    background-color: red;
+}
+.btn.equals{
+    background-color: green;
+}
