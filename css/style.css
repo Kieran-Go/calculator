@@ -6,7 +6,7 @@ h1{
 .display{
     border-style: solid;
     width: 500px;
-    height: auto;
+    height: 30px;
     display: flex;
     justify-content: end;
     justify-self: center;
