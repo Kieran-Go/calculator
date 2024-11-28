@@ -1,16 +1,13 @@
 function add(num1, num2){
-    const answer = num1 + num2;
-    return answer % 1 === 0 ? answer : answer.toFixed(2);
+    return formatResult(num1 + num2);
 }
 
 function subtract(num1, num2){
-    const answer =  num1 - num2;
-    return answer % 1 === 0 ? answer : answer.toFixed(2);
+    return formatResult(num1 - num2);
 }
 
 function multiply(num1, num2){
-    answer = num1 * num2;
-    return answer % 1 === 0 ? answer : answer.toFixed(2);
+    return formatResult(num1 * num2);
 }
 
 function divide(num1, num2){
@@ -18,8 +15,11 @@ function divide(num1, num2){
         alert("Can't divide by zero, idiot!");
         return;
     }
-    answer = num1 / num2;
-    return answer % 1 === 0 ? answer : answer.toFixed(2);
+    return formatResult(num1 / num2);
+}
+
+function formatResult(result){
+    return result % 1 === 0 ? result : result.toFixed(2)
 }
 
 function operate(input){
@@ -28,10 +28,17 @@ function operate(input){
     const operator = arr[1];
     const num2 = parseFloat(arr[2]);
 
-    if(operator === "+") return add(num1, num2);
-    else if(operator === "-") return subtract(num1, num2);
-    else if(operator === "*") return multiply(num1, num2);
-    else if(operator === "/") return divide(num1, num2);
+    if (isNaN(num1) || isNaN(num2) || !operators.includes(operator)) {
+        alert("Invalid input");
+        return "";
+    }
+
+    switch (operator) {
+        case "+": return add(num1, num2);
+        case "-": return subtract(num1, num2);
+        case "*": return multiply(num1, num2);
+        case "/": return divide(num1, num2);
+    }
 }
 
 function validateInputEquals(){
